@@ -2,3 +2,9 @@
   <%= text_field_tag :search_term, nil, placeholder: "Search for a movie", autofocus: true %>
   <%= submit_tag "Search" %>
 <% end %>
+
+<ul>
+  <% @search_results.each do |movie| %>
+    <li><%= movie["Title"] %></li>
+  <% end %>
+</ul>
